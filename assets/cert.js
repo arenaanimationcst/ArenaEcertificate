@@ -23,3 +23,8 @@ async function render(name,text){
  return c}
 const blobOf=c=>new Promise(r=>c.toBlob(r,'image/png'));
 function dl(b,n){const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=n;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)}
+const DEFBODY="This certificate is proudly awarded for active participation in the AVGC Career Guidance Seminar organized by Arena Animation, reflecting a keen interest in exploring the fields of Animation, Visual Effects (VFX), Gaming, and Comics, and gaining valuable insights for future professional development.\nThe seminar was held at **{{college}}** on **{{date}}**";
+const AIBODY="This certificate is proudly awarded for active participation in the Workshop on AVGC & Artificial Intelligence (AI) organized by Arena Animation CST, recognizing an enthusiastic interest in exploring the fields of Animation, Visual Effects (VFX), Gaming, Comics, and the emerging applications of AI in creative industries.\nThe workshop was held at **{{college}}** on **{{date}}**.";
+const fmt=v=>{if(!v)return'';const d=new Date(v+'T00:00:00'),n=d.getDate(),o=n%10==1&&n!=11?'st':n%10==2&&n!=12?'nd':n%10==3&&n!=13?'rd':'th';return n+o+' '+d.toLocaleDateString('en-GB',{month:'long',year:'numeric'})};
+const PRESETS={1:DEFBODY,2:AIBODY};
+const bodyFrom=(t,college,date)=>t.replace(/{{college}}/g,college||'your college').replace(/{{date}}/g,fmt(date)||'the seminar date');

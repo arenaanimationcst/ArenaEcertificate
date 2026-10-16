@@ -11,9 +11,12 @@
 <small>Wrap words in **double stars** for bold. {{college}} and {{date}} fill in automatically.</small>
 <div class="row" style="margin-top:6px"><button class="ghost" id="p1" style="color:var(--red)">Seminar text</button><button class="ghost" id="p2" style="color:var(--red)">AI workshop text</button></div>
 <label for="msg">WhatsApp message</label><textarea id="msg" rows="6"></textarea>
-<small>Placeholders: {{name}} {{college}} {{date}} {{link}} (link lets the student download the PDF)</small><br><button id="delSem" class="danger">Delete seminar</button></section>
+<small>Placeholders: {{name}} {{college}} {{date}} {{link}} (link lets the student download the PDF)</small>
+<label class="sw"><input type="checkbox" id="oAtt" role="switch"> Attach PDF in WhatsApp</label>
+<small>On: the PDF and message go to WhatsApp together and the student's number is copied, so press Ctrl+V in the contact search. Off: opens the chat directly.</small>
+<label class="sw"><input type="checkbox" id="oLnk" role="switch"> Include certificate link in message</label><br><button id="delSem" class="danger">Delete seminar</button></section>
 <section><h2>Add students</h2><textarea id="paste" rows="5" placeholder="Rahul Sharma, 9876543210&#10;Priya Patil 9123456780"></textarea>
-<div class="row" style="margin-top:8px"><button id="addBtn">Add to list</button><label class="btn ghost" style="margin:0;color:var(--red)">Excel / CSV<input type="file" id="xl" accept=".xlsx,.xls,.csv" hidden></label></div></section>
+<div class="row" style="margin-top:8px"><button id="addBtn">Add to list</button><button class="ghost" id="smp" style="color:var(--red)">Sample Excel</button><label class="btn ghost" style="margin:0;color:var(--red)">Excel / CSV<input type="file" id="xl" accept=".xlsx,.xls,.csv" hidden></label></div></section>
 </aside>
 <div><section id="live"><h2>Certificate preview</h2><canvas id="lv" style="width:100%;border:1px solid var(--line);border-radius:6px;display:block"></canvas>
 <div class="df"><input id="ln" placeholder="Type student name, certificate updates live" aria-label="Student name"><input id="lp" placeholder="WhatsApp number" aria-label="WhatsApp number"></div>

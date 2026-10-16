@@ -27,5 +27,5 @@ USING IT
 IMPORTANT
   - Choose the repository name once. Renaming it later breaks links already sent.
   - Seminar and student data is saved in the browser you use. Press Backup now and then.
-  - To release an update, upload the new files and change V='arena-cert-v1' in sw.js
-    to v2 so phones and laptops fetch the new version.
+  - To release an update, upload the new files and change V='arena-cert-v3' in sw.js
+    to the next number so phones and laptops fetch the new version.

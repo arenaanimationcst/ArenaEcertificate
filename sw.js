@@ -1,4 +1,4 @@
-const V='arena-cert-v1';
+const V='arena-cert-v3';
 const FILES=['./','./index.html','./admin/','./admin/index.html','./admin/manifest.webmanifest','./c/','./c/index.html',
 './assets/style.css','./assets/fonts.css','./assets/cert.js','./assets/admin.js','./assets/viewer.js','./assets/reg.js','./assets/bg.jpg',
 './assets/icon-192.png','./assets/icon-512.png','./assets/fonts/great-vibes-400.woff2','./assets/fonts/funnel-display-400.woff2','./assets/fonts/funnel-display-700.woff2',
