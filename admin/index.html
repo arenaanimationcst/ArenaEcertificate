@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#990000"><title>Arena CST - Certificate Desk</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="../assets/icon-192.png"><link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/style.css"></head><body>
+<header><h1>Certificate Desk</h1><span class="sub">Arena Animation C.S.T</span>
+<button id="exp" class="ghost">Backup</button><label class="btn ghost" style="margin:0">Restore<input type="file" id="imp" accept=".json" hidden></label></header>
+<main>
+<aside>
+<section><div class="row"><select id="semSel" aria-label="Seminar"></select><button id="newSem">New seminar</button></div>
+<label for="college">College / venue</label><input id="college" placeholder="e.g. KC College, Churchgate">
+<label for="date">Seminar date</label><input id="date" type="date">
+<label for="body">Certificate text</label><textarea id="body" rows="8"></textarea>
+<small>Wrap words in **double stars** for bold. {{college}} and {{date}} fill in automatically.</small>
+<div class="row" style="margin-top:6px"><button class="ghost" id="p1" style="color:var(--red)">Seminar text</button><button class="ghost" id="p2" style="color:var(--red)">AI workshop text</button></div>
+<label for="msg">WhatsApp message</label><textarea id="msg" rows="6"></textarea>
+<small>Placeholders: {{name}} {{college}} {{date}} {{link}} (link lets the student download the PDF)</small><br><button id="delSem" class="danger">Delete seminar</button></section>
+<section><h2>Add students</h2><textarea id="paste" rows="5" placeholder="Rahul Sharma, 9876543210&#10;Priya Patil 9123456780"></textarea>
+<div class="row" style="margin-top:8px"><button id="addBtn">Add to list</button><label class="btn ghost" style="margin:0;color:var(--red)">Excel / CSV<input type="file" id="xl" accept=".xlsx,.xls,.csv" hidden></label></div></section>
+</aside>
+<div><section id="live"><h2>Certificate preview</h2><canvas id="lv" style="width:100%;border:1px solid var(--line);border-radius:6px;display:block"></canvas>
+<div class="df"><input id="ln" placeholder="Type student name, certificate updates live" aria-label="Student name"><input id="lp" placeholder="WhatsApp number" aria-label="WhatsApp number"></div>
+<div class="df"><button id="lsend">Send on WhatsApp</button><button id="lpdf" class="ghost" style="color:var(--ink)">Download PDF</button><button id="ldl" class="ghost" style="color:var(--ink)">Download PNG</button><button id="ladd" class="ghost" style="color:var(--red)">Add to list</button></div></section>
+<section><div class="top"><h2 id="cnt">Students</h2><input id="q" placeholder="Search name or number" style="max-width:220px"></div><div id="rows"></div></section></div>
+</main>
+<div id="toast" role="status"></div>
+<script src="../vendor/jspdf.umd.min.js"></script><script src="../vendor/xlsx.full.min.js"></script><script src="../assets/cert.js"></script><script src="../assets/admin.js"></script><script src="../assets/reg.js"></script></body></html>
